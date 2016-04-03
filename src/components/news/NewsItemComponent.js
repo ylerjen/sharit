@@ -6,21 +6,23 @@ require('styles/news/NewsItem.sass');
 
 class NewsItemComponent extends React.Component {
   render() {
-    var author = this.props.author;
+    var news = this.props.news;
     return (
-        <li className={"news" + (news.active ? ' active' : '')}>        
-            <a href={"/author/" + news.author}>{news.author}</a> 
-            <span className="screen-name">@{news.author}</span> 
-            <span className="content">{news.url}</span>
+        <li className="news-item">
+            <a className="title" href="/#/news/{news.id}">{news.title}</a>
+            <div>by <a className="author" href="/#/author/{news.author}">{news.author}</a></div>
+            <div className="tags">
+                <a href="#/news?filter-type=tag&filter={news.tag}" className="tag">{news.tag}</a>
+            </div>
         </li>
     );
   }
 }
 
-NewsComponent.displayName = 'NewsNewsItemComponent';
+NewsItemComponent.displayName = 'NewsNewsItemComponent';
 
 // Uncomment properties you need
-// NewsComponent.propTypes = {};
-// NewsComponent.defaultProps = {};
+// NewsItemComponent.propTypes = {};
+// NewsItemComponent.defaultProps = {};
 
 export default NewsItemComponent;

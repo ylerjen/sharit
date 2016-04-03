@@ -7,16 +7,16 @@
 // import TestUtils from 'react-addons-test-utils';
 import createComponent from 'helpers/shallowRenderHelper';
 
-import NewsComponent from 'components/component/NewsComponent.js';
+import NewsItemComponent from 'components/news/NewsItemComponent.js';
 
 describe('NewsComponent', () => {
   let component;
 
   beforeEach(() => {
-    component = createComponent(NewsComponent);
+    component = createComponent(NewsItemComponent);
   });
 
   it('should have its component name as default className', () => {
-    expect(component.props.className).to.equal('news-component');
+    expect(component.props.className).to.equal('newsitem-component');
   });
 });
