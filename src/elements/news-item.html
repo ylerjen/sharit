@@ -1,0 +1,37 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import"
+      href="../../bower_components/iron-input/iron-input.html">
+
+<dom-module id="news-item">        
+    <polymer-element name="news-item">
+        <template>
+            <h2>This is <b>{{owner}}</b>'s name-tag element.</h2>    
+            <ul>
+                <template repeat="{{item in list}}">
+                    <li>item no {{item}}</li>
+                </template>
+            </ul>
+            <input is="iron-input" bind-value="{{owner}}"
+      placeholder="Your name here...">
+        </template>    
+    </polymer-element>
+    <script>
+        Polymer({
+            is: "news-item",
+            properties: {
+                owner: {
+                    type: String,
+                    value: "Daniel"
+                },
+                list: [1,2,4,5]
+            },
+            ready : function () {
+                this.list = [                    
+                    '1',
+                    '5',
+                    '8'
+                ];
+            }
+        });
+    </script>
+</dom-module>
