@@ -3,6 +3,7 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+   
 };
 
 /** User packages configuration. */
@@ -31,6 +32,7 @@ const barrels: string[] = [
   'app/shared',
   'app/news-list',
   'app/+news-list',
+  'app/news-list-item',
   /** @cli-barrel */
 ];
 

@@ -1,4 +1,6 @@
-<h1>News list</h1>
+<h1 class="main-text">Hello {{ componentName }}</h1>
 <ul>
-  
+  <li *ngFor="let item of newsList">
+    <news-list-item [item]="item"></news-list-item>
+  </li>
 </ul>

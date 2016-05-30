@@ -7,7 +7,7 @@ import { Routes , ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
   selector: 'sharit-app',
   templateUrl: 'sharit.component.html',
   styleUrls: ['sharit.component.css'],
-  directives: [ROUTER_DIRECTIVES],
+  directives: [ROUTER_DIRECTIVES, NewsListComponent],
   providers: [ROUTER_PROVIDERS]
 })
 @Routes([
@@ -16,4 +16,5 @@ import { Routes , ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
 ])
 export class SharitAppComponent {
   title = 'sharit works!';
+  componentName = 'Sharit App Component';
 }
