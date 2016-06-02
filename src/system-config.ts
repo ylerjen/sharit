@@ -33,6 +33,7 @@ const barrels: string[] = [
   'app/news-list',
   'app/+news-list',
   'app/news-list-item',
+  'app/news-form',
   /** @cli-barrel */
 ];
 
